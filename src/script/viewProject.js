@@ -1,5 +1,7 @@
-export const displayCard = (index, arrayList) =>{
-    const list = arrayList[index].list.map((list) => list);
+import {array} from "./data"
+
+ const displayCard = (index) =>{
+    const list = array[index].list.map((list) => list);
     const main = document.querySelector(".main-content")
 
     while(main.firstChild){
@@ -22,4 +24,22 @@ export const displayCard = (index, arrayList) =>{
         notes.textContent = list[i].notes
         dueDate.textContent = list[i].dueDate
    }
+}
+
+export const addEventOnLi = () => {
+    
+    const listContainer = document.querySelectorAll(".list-container li")
+    
+    listContainer.forEach(element => {
+        if(!element.hasEventListener){
+            element.addEventListener("click", ()=>{
+                const activeProject = element.getAttribute("data-index");
+                console.log((element.getAttribute("data-index")) )
+                const findIndexArray = array.findIndex(element => element.id === +activeProject)
+                displayCard(findIndexArray);
+            })
+        }
+        // add event listener to new element added.
+        element.hasEventListener = true;
+    })
 }
