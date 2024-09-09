@@ -11,8 +11,8 @@ function renderCardNotes(){
 
     liList.forEach(list => {
         list.addEventListener("click",()=> {
-            const next = array.findIndex(element => element.id === +list.getAttribute("data-index"))
-            displayCard(next, array)
+            const findIndexArray = array.findIndex(element => element.id === +list.getAttribute("data-index"))
+            displayCard(findIndexArray, array)
         })
     })
 
@@ -21,9 +21,10 @@ function renderCardNotes(){
     addBtn.addEventListener("click", () =>{
         createProject(array);
     })
+
+
     // default project
     displayCard(0,array)
-
 }
 
 
