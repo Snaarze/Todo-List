@@ -15,7 +15,8 @@ const createProject = (array) => {
     const createNewProject = new Project(currentIdProject,prompt())
     array.push(createNewProject);
     appendProject(currentIdProject, array);
-    addEventOnLi();
+    addEventOnLi(); 
+    
 }
 
 

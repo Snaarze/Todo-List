@@ -5,35 +5,35 @@
         list : [
             {
                 id : 0,
-                name : "My Weight",
+                title : "My Weight",
                 notes : "I need to reduce my weight by 2kg",
                 dueDate : "August 21, 2023",
             },
             {
                 id : 1,
-                name : "My Heigt",
+                title : "My Heigt",
                 notes : "I need to increase my height by 1 inch!",
                 dueDate : "August 21, 2023",
             },
             {
                 id : 2,
-                name : "Research",
+                title : "Research",
                 notes : "I need to research about computers",
                 dueDate : "August 21, 2023",
             },
             {
                 id : 3,
-                name : "Assignment",
+                title : "Assignment",
                 notes : "Math, English, Programming, Physical education",
                 dueDate : "August 21, 2023",
             }, {
                 id : 4,
-                name : "Nothing",
+                title : "Nothing",
                 notes : "Bluh",
                 dueDate : "August 21, 2023",
             }, {
                 id : 5,
-                name : "Note sure",
+                title : "Note sure",
                 notes : "say hi!",
                 dueDate : "August 21, 2023",
             }
@@ -45,13 +45,13 @@
         list : [
             {
                 id : 0,
-                name : "My Weight",
+                title : "My Weight",
                 notes : "I need to reduce my weight by 2kg",
                 dueDate : "August 21, 2023",
             },
             {
                 id : 1,
-                name : "My Heigt",
+                title : "My Heigt",
                 notes : "I need to increase my height by 1 inch!",
                 dueDate : "August 21, 2023",
             }

@@ -1,4 +1,4 @@
-
+import { displayCard } from "./viewProject";
 class list {
     constructor(title,description, dueDate, priority, notes , checklist ){
         this.title = title;
@@ -11,8 +11,8 @@ class list {
 }
 
 
-export const createProject = (array) =>{
-    const createProject = new list(prompt(),prompt(),prompt(),prompt(),prompt(),prompt())
-    array.push(createProject);
-    console.log(array)
+export const createList = (array,index) =>{
+    const createNewProject = new list(prompt(),prompt(),prompt(),prompt(),prompt(),prompt())
+    array[index].list.push(createNewProject)
+    displayCard(index)
 }
