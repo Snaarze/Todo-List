@@ -24,7 +24,7 @@ body {
     justify-content: center;
     align-items: start;
     height: 100%;
-    width: 15rem;
+    width: 25rem;
     text-align: center;
 }
 
@@ -68,3 +68,64 @@ body {
     bottom: 20px;
     right: 20px;
 }
+
+.addNotes {
+    width: 100px;
+    height: 100px;
+}
+
+.projectEditBtn, .projectDeleteBtn {
+    width: 3.5rem;
+    height: 1.3rem;
+    border: none;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.projectEditBtn {
+    background-color: lightgreen;
+}
+
+.projectDeleteBtn {
+    background-color: red;
+}
+
+.deleteModal { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 200px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    border: none;
+}
+
+.deleteModal > div > p {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.btn-dialog{
+    display: flex;
+    gap: 10px;
+}
+
+.noBtn, .yesBtn {
+    padding: 0.2rem 1rem;
+    color: white;
+    border: none;
+}
+
+.noBtn { 
+    background-color: red;
+}
+
+.yesBtn {
+    background-color: lightseagreen;
+}
+
+
+

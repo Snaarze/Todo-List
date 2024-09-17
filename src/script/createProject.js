@@ -1,5 +1,5 @@
 import { array } from "./data";
-import { addEventOnLi } from "./viewProject";
+import { addEventOnProjectList } from "./viewProject";
 class  Project {
     constructor(id,projectName){
         this.id = id
@@ -15,20 +15,39 @@ const createProject = (array) => {
     const createNewProject = new Project(currentIdProject,prompt())
     array.push(createNewProject);
     appendProject(currentIdProject, array);
-    addEventOnLi(); 
+    addEventOnProjectList(); 
     
 }
 
 
 function appendProject(id,array){
-    // select 
     const listContainer = document.querySelector(".list-container");
     const getArrayName = array.findIndex(element => element.id === id)
     // create an li to append on the sidenav
     const createLi  = document.createElement("li");
+    const createSpan = document.createElement("span")
+    createLi.style.display = "flex";
     createLi.setAttribute("data-index", `${id}`);
-    createLi.textContent = array[getArrayName].projectName ;
+    createSpan.textContent = array[getArrayName].projectName ;
+    createLi.appendChild(createSpan)
     listContainer.appendChild(createLi)
+
+    const createDiv = document.createElement("div")
+    createDiv.style.display = "flex"
+    createDiv.style.gap = "5px"
+    createLi.appendChild(createDiv)
+    const createEditBtn = document.createElement("button");
+    createEditBtn.classList.add("projectEditBtn")
+    createEditBtn.textContent = "Edit"
+    const createDeleteBtn = document.createElement("button");
+    createDeleteBtn.classList.add("projectDeleteBtn")
+    createDeleteBtn.textContent = "Delete"
+
+    createDiv.appendChild(createEditBtn)
+    createDiv.appendChild(createDeleteBtn)
+    
+   
+    
 }
 
 export const  addProjectBtn = () =>{

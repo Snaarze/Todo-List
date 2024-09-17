@@ -12,7 +12,7 @@ class list {
 
 
 export const createList = (array,index) =>{
-    const createNewProject = new list(prompt(),prompt(),prompt(),prompt(),prompt(),prompt())
+    const createNewProject = new list(prompt("Title: "),prompt("Description: "),prompt("dueDate: "),prompt("Priority: "),prompt("Notes : "),prompt("Checklist: "))
     array[index].list.push(createNewProject)
     displayCard(index)
 }

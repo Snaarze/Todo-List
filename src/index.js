@@ -1,14 +1,12 @@
 import "./style.css"
-import { addEventOnLi } from "./script/viewProject";
+import { addEventOnProjectList } from "./script/viewProject";
 import { addProjectBtn } from "./script/createProject";
 
 function renderCardNotes(){
     addProjectBtn();
-    addEventOnLi();
+    // initilized to have eventListener
+    addEventOnProjectList();
 }
-
-
-
 
 // default project
 renderCardNotes();
