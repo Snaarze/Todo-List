@@ -1,14 +1,14 @@
 import "./style.css";
-import { addEventOnProjectList } from "./script/viewProject";
-import { addProjectBtn } from "./script/createProject";
-import { displayCard } from "./script/viewProject";
+import { ProjectClass } from "./script/createProject";
+import { ProjectHandler } from "./script/viewProject";
+
 
 function renderCardNotes() {
-  addProjectBtn();
+  ProjectClass.addProjectBtn();
   // initilized to have eventListener
-  addEventOnProjectList();
+  ProjectHandler.addEventOnProjectList();
   // initial default display card
-  displayCard(0);
+ 
 }
 
 // default project
